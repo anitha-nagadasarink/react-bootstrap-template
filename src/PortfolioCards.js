@@ -8,7 +8,7 @@ import safe from "./assets/img/portfolio/safe.png";
 import submarine from "./assets/img/portfolio/submarine.png";
 
 import PortfolioPopup from "./ProffolioPopup";
-// import Card from "./Card";
+import Card from "./Card";
 
 
 const PortfolioCards = () => {
@@ -26,58 +26,29 @@ const PortfolioCards = () => {
 
           <div className="row justify-content-center">
 
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div className="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                </div>
-                <img className="img-fluid" src={cabin} alt="Cabin" />
-              </div>
+            <div className="col-md-6 col-lg-4 mb-5">          
+
+              <Card modalTarget="#portfolioModal1" cardImage={cabin}/>
             </div>
 
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div className="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                </div>
-                <img className="img-fluid" src={cake} alt="Cake" />
-              </div>
+            <div className="col-md-6 col-lg-4 mb-5">          
+            <Card modalTarget="#portfolioModal2" cardImage={cake}/>
             </div>
 
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div className="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                </div>
-                <img className="img-fluid" src={circus} alt="circus" />
-              </div>
+            <div className="col-md-6 col-lg-4 mb-5">           
+             <Card modalTarget="#portfolioModal3" cardImage={circus}/>
             </div>
 
-            <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
-              <div className="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                </div>
-                <img className="img-fluid" src={game} alt="Game" />
-              </div>
+            <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">            
+              <Card modalTarget="#portfolioModal4" cardImage={game}/>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-5 mb-md-0">
-              <div className="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                </div>
-                <img className="img-fluid" src={safe} alt="safe" />
-              </div>
+              <Card modalTarget="#portfolioModal5" cardImage={safe}/>
             </div>
 
-            <div className="col-md-6 col-lg-4">
-              <div className="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                </div>
-                <img className="img-fluid" src={submarine} alt="submarine" />
-              </div>
+            <div className="col-md-6 col-lg-4">             
+              <Card modalTarget="#portfolioModal6" cardImage={submarine}/>
             </div>
           </div>
         </div>
@@ -88,31 +59,37 @@ const PortfolioCards = () => {
      <PortfolioPopup 
      madalTarget="portfolioModal1"
      modalTitle ="Cabin"
+     modalImage = {cabin}
      modalText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"/>
 
      <PortfolioPopup 
      madalTarget="portfolioModal2"
      modalTitle ="Cake"
+     modalImage = {cake}
      modalText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"/>
 
      <PortfolioPopup 
      madalTarget="portfolioModal3"
      modalTitle ="Circus"
+     modalImage = {circus}
      modalText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"/>
 
      <PortfolioPopup 
      madalTarget="portfolioModal4"
      modalTitle ="Game"
+     modalImage = {game}
      modalText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"/>
 
      <PortfolioPopup 
      madalTarget="portfolioModal5"
      modalTitle ="Safe"
+     modalImage = {safe}
      modalText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"/>
 
      <PortfolioPopup 
      madalTarget="portfolioModal6"
      modalTitle ="Submarine"
+     modalImage = {submarine}
      modalText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"/>
      
     </>

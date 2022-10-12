@@ -1,12 +1,8 @@
 import React from "react";
 
-const PortfolioPopup = ({
-  madalTarget = "portfolioModal1",
-  modalTitle = "Cabin", 
-  modalText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque"
-}) => {
+const PortfolioPopup = (props) => {
   return (
-    <div className="portfolio-modal modal fade" id={madalTarget} tabIndex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+    <div className="portfolio-modal modal fade" id={props.madalTarget} tabIndex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header border-0"><button className="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -15,7 +11,7 @@ const PortfolioPopup = ({
               <div className="row justify-content-center">
                 <div className="col-lg-8">
 
-                  <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">Log {modalTitle}</h2>
+                  <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">Log {props.modalTitle}</h2>
 
                   <div className="divider-custom">
                     <div className="divider-custom-line"></div>
@@ -23,9 +19,9 @@ const PortfolioPopup = ({
                     <div className="divider-custom-line"></div>
                   </div>
 
-                  <img className="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                  <img className="img-fluid rounded mb-5" src={props.modalImage} alt="..." />
 
-                  <p className="mb-4">{modalText}</p>
+                  <p className="mb-4">{props.modalText}</p>
                   <button className="btn btn-primary" data-bs-dismiss="modal">
                     <i className="fas fa-xmark fa-fw"></i>
                     Close Window
